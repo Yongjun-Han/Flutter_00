@@ -116,7 +116,17 @@ class MyApp extends StatelessWidget {
         //     ],
         //   ),
         // ),
-        body: ShopItem(),
+        body: ListView(
+          children: [
+            Text("hello"),
+            Text("hello"),
+            Text("hello"),
+            Text("hello"),
+            Text("hello"),
+            Text("hello"),
+            Text("hello"),
+          ],
+        ),
         bottomNavigationBar: BottomAppBar(
           child: SizedBox(
             height: 50,
