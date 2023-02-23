@@ -13,20 +13,35 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("트래블로퍼"),
+          leading: Icon(Icons.menu),
+          actions: [Icon(Icons.star),Icon(Icons.star),Icon(Icons.star)],
          ),
-        body : Align(
-          alignment: Alignment.centerLeft,
-          child: Container(
-            width: double.infinity,
-            height: 100,
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.fromLTRB(20,0,0,0),
+        body : Container(
+            width: double.maxFinite,
+            height: 150,
+            padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Colors.teal,
-              // border: Border.all(color: Colors.black),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              color: Colors.white,
+              border: Border.all(color: Colors.black, width: 2),
             ),
-            child: Text('박스'),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                width: 120,
+                height: 120,
+                child: Image.asset('assets/image.jpg', fit: BoxFit.cover,)
+              ),
+              SizedBox(
+                width: 100,
+                height: 80,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.teal
+                  ),
+                ),
+              )
+            ],
           ),
         ),
         bottomNavigationBar: BottomAppBar(
