@@ -32,13 +32,45 @@ class MyApp extends StatelessWidget {
                 height: 120,
                 child: Image.asset('assets/image.jpg', fit: BoxFit.cover,)
               ),
-              SizedBox(
-                width: 100,
-                height: 80,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.teal
-                  ),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      child: RichText(
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        text: TextSpan(
+                          text: '로지텍 mx keys for mac 풀박스 판매합니다.',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 18
+                          )
+                        ),
+                      ),
+                    ),
+                    Text('탄방동 - 끌올 10분전',style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 12
+                    ),),
+                    Text('90,000원',style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600
+                    ),),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Icon(Icons.favorite_border),
+                          Text('4',style: TextStyle(color: Colors.grey),)
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               )
             ],
