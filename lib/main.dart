@@ -77,45 +77,46 @@ class MyApp extends StatelessWidget {
         //     ],
         //   ),
         // ),
-        body: Container(
-          height: 170,
-          padding: EdgeInsets.all(10),
-          child: Row(
-            children: [
-              Flexible(
-                flex: 3,
-                child: Container(
-                  color: Colors.blue,
-                  // child: Image.asset('assets/image.jpg',fit: BoxFit.contain),
-                ),
-              ),
-              Flexible(
-                flex: 7,
-                child: Container(
-                    width: double.infinity,
-                    color: Colors.blueGrey,
-                    padding: EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("로지텍 사무용 키보드 판매합니다",style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),),
-                      SizedBox(height: 5,),
-                      Text('탄방동 - 끌올 10분전',style: TextStyle(fontWeight: FontWeight.w500),),
-                      Text('90,000 원'),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Icon(Icons.favorite),
-                          Text('4')
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+        // body: Container(
+        //   height: 170,
+        //   padding: EdgeInsets.all(10),
+        //   child: Row(
+        //     children: [
+        //       Flexible(
+        //         flex: 3,
+        //         child: Container(
+        //           color: Colors.blue,
+        //           // child: Image.asset('assets/image.jpg',fit: BoxFit.contain),
+        //         ),
+        //       ),
+        //       Flexible(
+        //         flex: 7,
+        //         child: Container(
+        //             width: double.infinity,
+        //             color: Colors.blueGrey,
+        //             padding: EdgeInsets.all(20),
+        //           child: Column(
+        //             crossAxisAlignment: CrossAxisAlignment.start,
+        //             children: [
+        //               Text("로지텍 사무용 키보드 판매합니다",style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),),
+        //               SizedBox(height: 5,),
+        //               Text('탄방동 - 끌올 10분전',style: TextStyle(fontWeight: FontWeight.w500),),
+        //               Text('90,000 원'),
+        //               Row(
+        //                 mainAxisAlignment: MainAxisAlignment.end,
+        //                 children: [
+        //                   Icon(Icons.favorite),
+        //                   Text('4')
+        //                 ],
+        //               )
+        //             ],
+        //           ),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        body: ShopItem(),
         bottomNavigationBar: BottomAppBar(
           child: SizedBox(
             height: 50,
@@ -134,4 +135,16 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class ShopItem extends StatelessWidget {
+  const ShopItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: Text('장바구니 담기'),
+    );
+  }
+}
+
 
